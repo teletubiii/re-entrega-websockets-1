@@ -1,0 +1,40 @@
+<!-- form for nombre, apellido, edad -->
+<div>
+    <div class="form-group">
+        <label for="name">Producto</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Producto">
+    </div>
+    <div class="form-group">
+        <label for="price">Precio</label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Precio">
+    </div>
+    <div class="form-group">
+        <label for="thumbnail">Thumbnail</label>
+        <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="URL de la imagen">
+    </div>
+    <button onclick="sendProduct()" class="btn btn-primary">Enviar</button>
+</div>
+
+<div id="lista">
+    <table class="table" style="margin: 0 auto; width: 50%;">
+        <thead>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody id="product-list">
+        </tbody>
+    </table>
+</div>
+
+
+<h1>Centro de Mensajes</h1>
+<div id="messages"></div>
+<div class="rojo"></div>
+<form onsubmit="return addMessage(this)">
+    <input id="username" type="text" placeholder="Type your email here..." required />
+    <input type="text" id="texto" placeholder="Cuéntanos algo..." />
+    <input type="submit" value="Enviar" />
+</form>

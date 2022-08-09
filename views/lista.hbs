@@ -1,0 +1,31 @@
+<div class="div-btn">
+    <a href="/">
+        <button class="btn btn-secondary">Cargar producto</button>
+    </a>
+</div>
+<table class="table" style="margin: 0 auto; width: 50%;">
+  <thead>
+      <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Thumbnail</th>
+      </tr>
+  </thead>
+  <tbody>
+      <!-- if no datos -->
+      {{#unless datos }}
+          <tr>
+              <td colspan="3">No hay productos</td>
+          </tr>
+      {{/unless}}
+      {{#if datos}}
+          {{#each datos}}
+              <tr>
+                  <td>{{name}}</td>
+                  <td>{{price}}</td>
+                  <td><img src="{{thumbnail}}" alt='Imagen de {{name}}'></td>
+              </tr>
+          {{/each}}
+      {{/if}}
+  </tbody>
+</table>
